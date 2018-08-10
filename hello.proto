@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.vmware.iotc.service.grpc.hello;
+
+// The greeting service definition.
+service GreetingService {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {
+    }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+    string name = 1 [deprecated = true];
+    string first_name = 3;
+    string last_name = 4;
+}
+
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
+}
+
